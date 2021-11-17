@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}New encrypted message{% endblock title %}
+
+{% block content %}
+<h1>New encrypted message</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button class="btn btn-success ml-2" type="submit">Encrypt</button>
+</form>
+{% endblock content %}
